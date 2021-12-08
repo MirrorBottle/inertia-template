@@ -1,0 +1,13 @@
+.kenji-form {
+    .el-form {
+        &-item {
+            label {
+                padding: 10px 0 0;
+            }
+
+            .submit-button {
+                margin-top: 2rem;
+            }
+        }
+    }
+}

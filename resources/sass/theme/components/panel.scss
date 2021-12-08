@@ -1,0 +1,59 @@
+@import "../variables";
+
+.panel {
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    display: flex;
+    gap: 1rem;
+
+    &-primary {
+        background: $primary;
+    }
+
+    &-danger {
+        background: $third;
+    }
+
+    &-warning {
+        background: $secondary;
+    }
+
+    &-success {
+        background: $success;
+    }
+
+    &-icon {
+        width: 85px;
+        height: 85px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.25);
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 32px;
+    }
+
+    &-content {
+        width: calc(100% - 85px);
+        color: #fff;
+        text-align: right;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        flex-direction: column;
+
+        &-title {
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        &-count {
+            font-size: 40px;
+            font-weight: 600;
+            margin: 0;
+            line-height: 1.2;
+        }
+    }
+}

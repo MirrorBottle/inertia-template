@@ -1,0 +1,56 @@
+@import "../../variables";
+
+.notification-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 1em;
+
+    .notification-item {
+        width: 225px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &:not(:last-child) {
+            padding-bottom: 1em;
+            border-bottom: solid 1px #e0e0e0;
+        }
+
+        &-image {
+            img {
+                border-radius: 4px;
+            }
+        }
+
+        &-content {
+            display: flex;
+            gap: 2.5px;
+            flex-direction: column;
+
+            .content-title {
+                font-size: 12px;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .all-notification-button {
+        background: #1a1351;
+        border-radius: 4px;
+        font-weight: 600;
+        text-align: center;
+
+        a {
+            color: white;
+            padding: 1em;
+            display: block;
+            text-decoration: none;
+        }
+    }
+}

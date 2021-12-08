@@ -1,0 +1,72 @@
+body {
+    overflow-y: scroll;
+}
+
+.rd-navbar-main {
+    padding: 14px 0 !important;
+
+    .rd-navbar-panel {
+        .brand {
+            display: flex;
+            gap: 10px;
+            font-size: 1.25em;
+            align-items: center;
+            position: relative;
+            top: -6px;
+
+            img {
+                width: 400px !important;
+            }
+        }
+    }
+}
+
+.submenu-wrapper {
+    display: relative;
+
+    &:hover {
+        ul {
+            display: block;
+        }
+    }
+
+    .submenu-item {
+        position: absolute;
+        display: none;
+        left: calc(100% - 2em);
+        margin-top: -2em;
+        background: white;
+        padding: 1em 2em;
+        border-radius: 4px;
+        width: 250px;
+    }
+}
+
+.box-minimal-title {
+    height: 65px;
+}
+
+.leaflet-shadow-pane {
+    img {
+        width: 25px !important;
+    }
+}
+
+// mobile responsive
+@include media-breakpoint-down(sm) {
+    .rd-navbar-main {
+        .rd-navbar-panel {
+            height: 70px !important;
+            padding: 8px !important;
+
+            .brand {
+                top: -1px !important;
+                left: 8.5% !important;
+
+                img {
+                    width: 250px !important;
+                }
+            }
+        }
+    }
+}

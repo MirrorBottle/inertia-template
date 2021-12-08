@@ -1,0 +1,29 @@
+@import "../variables";
+
+.el-card {
+    border-radius: 0.75rem;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1em;
+        padding: 1rem 1.5rem;
+        border-bottom: 0;
+
+        span {
+            font-weight: 600;
+            font-size: 1.5em;
+        }
+
+        button {
+            /* float: right; */
+            color: $text;
+            margin-left: auto;
+            padding: 3px 0px;
+        }
+    }
+
+    &__body {
+    }
+}

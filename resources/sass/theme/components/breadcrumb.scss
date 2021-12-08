@@ -1,0 +1,12 @@
+@import "../variables";
+
+.el-breadcrumb {
+    margin-left: 1px;
+
+    span[role="link"] {
+        a {
+            color: $primary !important;
+            font-weight: 500;
+        }
+    }
+}

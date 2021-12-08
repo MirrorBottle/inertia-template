@@ -1,0 +1,30 @@
+.upload-wrapper-flex {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+
+    .el-upload {
+        &__tip {
+            margin-top: 0;
+        }
+
+        &-list {
+            width: 100%;
+
+            &__item-status-label {
+                padding-top: 0 !important;
+            }
+
+            li {
+                &:first-child {
+                    margin: 0 !important;
+                }
+
+                &:not(:first-child) {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
