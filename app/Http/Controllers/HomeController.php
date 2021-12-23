@@ -27,28 +27,28 @@ class HomeController extends Controller
                 'visitor' => 1
             ]);
         }
-        return view('visitors.pages.home');
+        return view('web.index');
     }
 
-    public function page($slug = null)
-    {
-        if ($slug == null) {
-            abort(404);
-        }
-        $page = Page::where('slug', $slug)->first();
-        $agent = new Agent();
-        $ip = request()->ip();
-        $device = $agent->platform() . ', ' . $agent->browser();
-        $check = Visitor::existByPage($ip, $page->id);
-        if (!$check) {
-            Visitor::create([
-                'ip_address' => $ip,
-                'device' => $device,
-                'visitor' => 1,
-                'page_id' => $page->id
-            ]);
-            $page->update(['views' => $page->views + 1]);
-        }
-        return view('visitors.pages.template', compact('page'));
-    }
+    // public function page($slug = null)
+    // {
+    //     if ($slug == null) {
+    //         abort(404);
+    //     }
+    //     $page = Page::where('slug', $slug)->first();
+    //     $agent = new Agent();
+    //     $ip = request()->ip();
+    //     $device = $agent->platform() . ', ' . $agent->browser();
+    //     $check = Visitor::existByPage($ip, $page->id);
+    //     if (!$check) {
+    //         Visitor::create([
+    //             'ip_address' => $ip,
+    //             'device' => $device,
+    //             'visitor' => 1,
+    //             'page_id' => $page->id
+    //         ]);
+    //         $page->update(['views' => $page->views + 1]);
+    //     }
+    //     return view('visitors.pages.template', compact('page'));
+    // }
 }

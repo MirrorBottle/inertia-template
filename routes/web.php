@@ -50,8 +50,6 @@ Route::group([
     'as' => 'home.'
 ], function() {
     Route::get('/', [HomeController::class, 'index'])->name('index');
-    Route::get('/contact', [WebContactController::class, 'index'])->name('contact');
-    Route::post('/contact', [WebContactController::class, 'store'])->name('contact.post');
     // dynamic page
     Route::get('/page/{slug}', [HomeController::class, 'page'])->name('page');
 });
